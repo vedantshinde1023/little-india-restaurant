@@ -66,7 +66,7 @@ function HomeContent() {
               'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/hero-home-Qj84mvTWuQiPyNY8GxHcbZ.webp)',
           }}
         >
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         {/* Content */}
@@ -168,6 +168,7 @@ function HomeContent() {
               className="group bg-background rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
             >
               <div className="relative h-48 overflow-hidden bg-muted">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <img
                   src={`https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/${service.slug}-hero-Qj84mvTWuQiPyNY8GxHcbZ.webp`}
                   alt={service.title}

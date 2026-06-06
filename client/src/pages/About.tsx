@@ -40,7 +40,7 @@ function AboutContent() {
               'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/restaurant-ambiance-AniTqqTh24NRxyAZbHvLVt.webp)',
           }}
         >
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="relative z-10 text-center max-w-2xl mx-auto px-6">
