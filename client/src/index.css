@@ -43,82 +43,202 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  /* Little India Restaurant — "Spice & Warmth" Design System */
+  /* Warm earthy palette inspired by clay tandoors and fresh herbs */
+  
+  /* Primary brand accent: Rust/Terracotta (represents clay tandoors) */
+  --primary: oklch(0.55 0.15 25);
+  --primary-foreground: oklch(1 0 0);
+  
+  /* Secondary accent: Sage Green (fresh herbs, natural ingredients) */
+  --accent: oklch(0.45 0.08 150);
+  --accent-foreground: oklch(1 0 0);
+  
+  /* Sidebar colors */
+  --sidebar-primary: oklch(0.55 0.15 25);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.45 0.08 150);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  
+  /* Chart colors (warm palette) */
+  --chart-1: oklch(0.55 0.15 25);
+  --chart-2: oklch(0.65 0.12 35);
+  --chart-3: oklch(0.45 0.08 150);
+  --chart-4: oklch(0.75 0.12 80);
+  --chart-5: oklch(0.85 0.08 50);
+  
+  /* Border radius */
+  --radius: 0.5rem;
+  
+  /* Background: Warm Ivory */
+  --background: oklch(0.96 0.01 50);
+  --foreground: oklch(0.2 0.02 25);
+  
+  /* Card colors */
+  --card: oklch(0.98 0.005 50);
+  --card-foreground: oklch(0.2 0.02 25);
+  
+  /* Popover colors */
+  --popover: oklch(0.98 0.005 50);
+  --popover-foreground: oklch(0.2 0.02 25);
+  
+  /* Secondary colors */
+  --secondary: oklch(0.92 0.01 50);
+  --secondary-foreground: oklch(0.3 0.02 25);
+  
+  /* Muted colors */
+  --muted: oklch(0.88 0.008 50);
+  --muted-foreground: oklch(0.45 0.04 25);
+  
+  /* Destructive */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  
+  /* Borders and inputs */
+  --border: oklch(0.92 0.005 50);
+  --input: oklch(0.92 0.005 50);
+  --ring: oklch(0.55 0.15 25);
+  
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.005 50);
+  --sidebar-foreground: oklch(0.2 0.02 25);
+  --sidebar-border: oklch(0.92 0.005 50);
+  --sidebar-ring: oklch(0.55 0.15 25);
+  
+  /* Custom tokens for restaurant branding */
+  --ivory-overlay: oklch(0.95 0.02 50);
+  --terracotta-accent: oklch(0.55 0.15 25);
+  --sage-accent: oklch(0.45 0.08 150);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
+  /* Dark mode for Little India Restaurant */
+  /* Warm, earthy dark palette */
+  
+  --primary: oklch(0.55 0.15 25);
+  --primary-foreground: oklch(0.98 0.005 50);
+  --sidebar-primary: oklch(0.55 0.15 25);
+  --sidebar-primary-foreground: oklch(0.98 0.005 50);
+  
+  /* Dark background with warm undertone */
+  --background: oklch(0.15 0.02 30);
+  --foreground: oklch(0.92 0.01 50);
+  
+  /* Card colors */
+  --card: oklch(0.22 0.02 30);
+  --card-foreground: oklch(0.92 0.01 50);
+  
+  /* Popover colors */
+  --popover: oklch(0.22 0.02 30);
+  --popover-foreground: oklch(0.92 0.01 50);
+  
+  /* Secondary colors */
+  --secondary: oklch(0.25 0.02 30);
+  --secondary-foreground: oklch(0.85 0.01 50);
+  
+  /* Muted colors */
+  --muted: oklch(0.3 0.02 30);
+  --muted-foreground: oklch(0.75 0.02 50);
+  
+  /* Accent */
+  --accent: oklch(0.45 0.08 150);
+  --accent-foreground: oklch(0.98 0.005 50);
+  
+  /* Destructive */
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  
+  /* Borders and inputs */
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.55 0.15 25);
+  
+  /* Chart colors (warm palette) */
+  --chart-1: oklch(0.55 0.15 25);
+  --chart-2: oklch(0.65 0.12 35);
+  --chart-3: oklch(0.45 0.08 150);
+  --chart-4: oklch(0.75 0.12 80);
+  --chart-5: oklch(0.85 0.08 50);
+  
+  /* Sidebar */
+  --sidebar: oklch(0.22 0.02 30);
+  --sidebar-foreground: oklch(0.92 0.01 50);
+  --sidebar-accent: oklch(0.45 0.08 150);
+  --sidebar-accent-foreground: oklch(0.98 0.005 50);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.55 0.15 25);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    /* Typography System */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Manrope', sans-serif;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.05em;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.03em;
+  }
+  
+  h3 {
+    font-size: 1.875rem;
+    letter-spacing: 0.02em;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  small {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Eyebrow/Label styling */
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
