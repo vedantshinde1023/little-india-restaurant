@@ -26,6 +26,21 @@ export default function Services() {
 }
 
 function ServicesContent() {
+  // Map service slugs to correct image URLs
+  const serviceImageMap: Record<string, string> = {
+    'butter-chicken': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/butter-chicken-hero-iLUgTzUeAemnhcSMUZoupx.webp',
+    'chicken-maratha': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/chicken-maratha-hero-496AWXS8LLXXPkWv3H5Yej.webp',
+    'murg-mussallam': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/murg-mussallam-hero-CMmFBVrDVUXDV6isZuxwzs.webp',
+    'tandoori-chicken': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/tandoori-chicken-hero-WjmcQeFP4pseArZw4vLkpo.webp',
+    'paneer-tikka': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/paneer-tikka-hero-2UzHDZJEx682i2t8NkXvBF.webp',
+    'chicken-tikka-masala': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/chicken-tikka-masala-hero-mLhrMaX7SnZCYsdc64VXqq.webp',
+    'chicken-biryani': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/biryani-hero-Pw5pSFaamTg3m6mmTkuBCB.webp',
+  };
+
+  const getServiceImageUrl = (slug: string): string => {
+    return serviceImageMap[slug] || 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/hero-home-Qj84mvTWuQiPyNY8GxHcbZ.webp';
+  };
+
   const allServices = [
     {
       title: 'Butter Chicken',
@@ -126,7 +141,7 @@ function ServicesContent() {
               <div className="relative h-48 overflow-hidden bg-muted">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <img
-                  src={`https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/${service.slug}-hero-Qj84mvTWuQiPyNY8GxHcbZ.webp`}
+                  src={getServiceImageUrl(service.slug)}
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

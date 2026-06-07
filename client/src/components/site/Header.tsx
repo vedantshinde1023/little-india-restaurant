@@ -47,7 +47,7 @@ export function Header() {
           : 'bg-background border-b border-border'
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 flex items-center justify-between w-full">
         {/* Logo/Brand */}
         <a
           href="/"
@@ -116,7 +116,7 @@ export function Header() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-background border-b border-border">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-4 flex flex-col gap-4 w-full">
             {navItems.map((item) => (
               <a
                 key={item.href}

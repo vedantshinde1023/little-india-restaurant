@@ -38,8 +38,8 @@ export function Section({
   }
 
   return (
-    <section className={cn(bgColorClass, 'py-24 lg:py-32', className)}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section className={cn(bgColorClass, 'py-12 sm:py-16 md:py-24 lg:py-32', className)}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         {children}
       </div>
     </section>

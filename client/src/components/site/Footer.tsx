@@ -24,10 +24,10 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-muted mt-24 lg:mt-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-24">
+    <footer className="bg-muted mt-12 sm:mt-16 md:mt-24 lg:mt-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-16 md:py-20 lg:py-24">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-12 sm:mb-16">
           {/* Brand Section */}
           <div>
             <h3 className="text-lg font-display font-bold mb-4">Little India</h3>
