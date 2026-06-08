@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
+import { useRef } from 'react';
 import { Section, SectionHeading, Eyebrow } from '@/components/site';
 import { SEO } from '@/components/SEO';
+import { MapView } from '@/components/Map';
 import { ArrowRight, MapPin, Phone } from 'lucide-react';
 
 /**
@@ -30,6 +32,22 @@ export default function Home() {
 }
 
 function HomeContent() {
+  const mapRef = useRef<google.maps.Map | null>(null);
+
+  const handleMapReady = (map: google.maps.Map) => {
+    mapRef.current = map;
+    
+    // Add marker for Little India Restaurant
+    const restaurantLocation = { lat: 18.5234567, lng: 73.8123456 };
+    
+    // Create advanced marker
+    new google.maps.marker.AdvancedMarkerElement({
+      map,
+      position: restaurantLocation,
+      title: 'Little India Restaurant',
+    });
+  };
+
   // Map service slugs to correct image URLs
   const serviceImageMap: Record<string, string> = {
     'butter-chicken': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663554181221/5omo3gGVAmXHsUcHNXncB3/butter-chicken-hero-iLUgTzUeAemnhcSMUZoupx.webp',
@@ -304,11 +322,12 @@ function HomeContent() {
               </Button>
             </div>
           </div>
-          <div className="relative h-96 rounded-lg overflow-hidden bg-muted">
-            <div className="w-full h-full flex items-center justify-center">
-              <MapPin className="w-12 h-12 text-muted-foreground" />
-            </div>
-          </div>
+          <MapView
+            initialCenter={{ lat: 18.5234567, lng: 73.8123456 }}
+            initialZoom={15}
+            onMapReady={handleMapReady}
+            className="h-96 rounded-lg overflow-hidden"
+          />
         </div>
       </Section>
 
