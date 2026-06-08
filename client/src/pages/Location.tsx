@@ -1,6 +1,8 @@
 import { Section, SectionHeading, Eyebrow } from '@/components/site';
+import { useRef, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
+import { MapView } from '@/components/Map';
 import { MapPin, Phone, Clock, ParkingCircle } from 'lucide-react';
 
 /**
@@ -28,6 +30,22 @@ export default function Location() {
 }
 
 function LocationContent() {
+  const mapRef = useRef<google.maps.Map | null>(null);
+
+  const handleMapReady = (map: google.maps.Map) => {
+    mapRef.current = map;
+    
+    // Add marker for Little India Restaurant
+    const restaurantLocation = { lat: 18.5234567, lng: 73.8123456 };
+    
+    // Create advanced marker
+    new google.maps.marker.AdvancedMarkerElement({
+      map,
+      position: restaurantLocation,
+      title: 'Little India Restaurant',
+    });
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -103,18 +121,12 @@ function LocationContent() {
               </a>
             </Button>
           </div>
-          <div className="relative h-96 rounded-lg overflow-hidden bg-muted">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8887123456789!2d73.8123456!3d18.5234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9d5c1234567%3A0x1234567890abcdef!2sLittle%20India%20Restaurant!5e0!3m2!1sen!2sin!4v1234567890"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full"
-            />
-          </div>
+          <MapView
+            initialCenter={{ lat: 18.5234567, lng: 73.8123456 }}
+            initialZoom={15}
+            onMapReady={handleMapReady}
+            className="h-96 rounded-lg overflow-hidden"
+          />
         </div>
       </Section>
 
